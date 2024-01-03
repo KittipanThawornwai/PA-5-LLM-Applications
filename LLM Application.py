@@ -7,7 +7,7 @@ openai_api_key = st.sidebar.text_input('OpenAI API Key', type='password')
 def generate_response(topic):
   llm = OpenAI(model_name='text-davinci-003', openai_api_key=openai_api_key)
   template = """Act as a head of the advertising department.
-            Create 10 slogan for {Topic}
+            Create 10 slogan for {topic}
             List of 10 suggestions in table, one suggestion per row.
             Each row should have 2 columns:
             - "slogan" - what the slogan is
